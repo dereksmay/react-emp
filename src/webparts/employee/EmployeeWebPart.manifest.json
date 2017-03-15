@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "42512313-9c82-438e-a121-8a67a72655c5",
+  "alias": "EmployeeWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "42512313-9c82-438e-a121-8a67a72655c5",
+    "group": { "default": "Under Development" },
+    "title": { "default": "Employee" },
+    "description": { "default": "Employee description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "Employee"
+    }
+  }]
+}

@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "employee-react-client-side-solution",
+    "id": "9ac6a323-0441-4301-9d33-e1f64fd52018",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/employee-react.sppkg"
+  }
+}

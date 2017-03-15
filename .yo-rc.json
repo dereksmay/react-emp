@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "libraryName": "employee-react",
+    "framework": "react",
+    "version": "1.0.0",
+    "libraryId": "9ac6a323-0441-4301-9d33-e1f64fd52018"
+  }
+}

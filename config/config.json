@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/employee/EmployeeWebPart.js",
+      "manifest": "./src/webparts/employee/EmployeeWebPart.manifest.json",
+      "outputPath": "./dist/employee.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "employeeStrings": "webparts/employee/loc/{locale}.js"
+  }
+}
