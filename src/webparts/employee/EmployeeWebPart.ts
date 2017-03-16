@@ -8,26 +8,29 @@ import {
 } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'employeeStrings';
-import Employee from './components/Employee';
+import EmployeeCrud from './components/Employee';
 import { IEmployeeProps } from './components/IEmployeeProps';
 import { IEmployeeWebPartProps } from './IEmployeeWebPartProps';
-import {IListItem} from './components/IListItems';
 
 export default class EmployeeWebPart extends BaseClientSideWebPart<IEmployeeWebPartProps> {
-
   public render(): void {
-    const element: React.ReactElement<IEmployeeProps > = React.createElement(
-      Employee,
+    const element: React.ReactElement<IEmployeeProps> = React.createElement(
+      EmployeeCrud,
       {
-        description: this.properties.description
+        spHttpClient: this.context.spHttpClient,
+        siteUrl: this.context.pageContext.web.absoluteUrl,
+        listName: this.properties.listName
       }
+    
     );
 
     ReactDom.render(element, this.domElement);
   }
 
+
   protected get dataVersion(): Version {
     return Version.parse('1.0');
+    
   }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -43,6 +46,9 @@ export default class EmployeeWebPart extends BaseClientSideWebPart<IEmployeeWebP
               groupFields: [
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
+                }),
+                PropertyPaneTextField('listName',{
+                  label:"List Name"
                 })
               ]
             }
